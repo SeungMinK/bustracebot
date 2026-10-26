@@ -1,0 +1,9 @@
+{
+  "name": "bustracebot",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {"start":"concurrently \"npm:server\" \"npm:collector\"","dev":"concurrently \"npm:server\" \"npm:client\"","server":"node server/index.mjs","client":"vite --host 0.0.0.0","build":"vite build","collector":"node collector.mjs","collector:test":"node collector.mjs --run-now"},
+  "dependencies": {"better-sqlite3":"^12.4.1","express":"^5.1.0","react":"^19.1.1","react-dom":"^19.1.1"},
+  "devDependencies": {"@vitejs/plugin-react":"^5.0.2","concurrently":"^9.2.1","vite":"^7.1.3"}
+}
